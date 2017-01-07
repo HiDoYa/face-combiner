@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+	<title>Picture</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+	<!-- Jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<h1 class="title text-center">Upload your picture here</h1>
+		</div>
+
+		<div class="row text-center">
+			<form id="form1">
+				<h3>Top Images</h3>
+				<input type='file' id='imgTop' name='imgTop' accept="image/*"/>
+				<h3>Middle Images</h3>
+				<input type='file' id='imgMid' name='imgMid' accept="image/*"/>
+				<h3>Bottom Images</h3>
+				<input type='file' id='imgBot' name='imgBot' accept="image/*"/>
+
+				<h4>Click submit below when you are done uploading images.</h4>
+				<input type='button' id='btn' value='Submit'></button>
+			</form>
+		</div>
+
+		<div class="row">
+			<img class="img-responsive center-block" id="showTop" src="#" width="640" height="328"/>
+			<img class="img-responsive center-block" id="showMid" src="#" width="640" height="328"/>
+			<img class="img-responsive center-block" id="showBot" src="#" width="640" height="328"/>
+		</div>
+
+	</div>
+	<!-- Jquery Code -->
+	<script type="text/javascript" src="main.js"></script>
+</body>
+</htmtl
