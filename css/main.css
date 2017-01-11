@@ -8,4 +8,20 @@
 .title {
 	background: #566b8c;
 	color: white;
+	padding: 2%;
+}
+
+.main-page {
+	background: #7da6e8;
+}
+
+.button {
+	background-color: #cddbf2;
+	color: blue;
+	padding: 1%;
+	text-align: center;
+}
+
+.hid {
+	visibility: hidden;
 }
