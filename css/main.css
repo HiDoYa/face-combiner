@@ -5,23 +5,36 @@
 	-ms-box-sizing: border-box;
 }
 
+body {
+	background-color: #fafafa;
+	color; #555;
+}
+
 .title {
 	background: #566b8c;
 	color: white;
+	border-color: black;
+	border-style: solid;
 	padding: 2%;
 }
 
 .main-page {
-	background: #7da6e8;
+	background-color: #7da6e8;
+	border-style: solid;
 }
 
 .button {
 	background-color: #cddbf2;
-	color: blue;
+	border-style: solid;
 	padding: 1%;
+	margin: 1%;
 	text-align: center;
 }
 
 .hid {
 	visibility: hidden;
+}
+
+.left-scroll {
+
 }
