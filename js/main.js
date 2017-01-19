@@ -1,3 +1,4 @@
+//FOR UPLOADING IMAGES
 //Initially hide all images 
 $('img').hide();
 
@@ -33,10 +34,13 @@ $("#btn").click(function()
 
 
 //1. Load all images into document, one overlapping other. Use for loop for each of the images that are to be uploaded on the same position. New image html element for each file upload
+//(use javascript to add centered image automatically. Use dimensions given by email. remove explicit html element for img?)
 //2. When button for left or right is clicked, remove or show the image that is corresponding. Account for looping accordingly
 //3. slideIndex counts the current picture index
 //4. Show/hide buttons along with images
 //5. Randomize the initial order?
+
+//FOR SCROLLING THROUGH IMAGES
 var slideIndex = 1;
 
 function plusDivs(n)
