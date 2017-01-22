@@ -21,24 +21,48 @@
 		<div class="row text-center main-page">
 			<form>
 				<h3>Top Images</h3>
-				<input class='button' type='file' multiple id='img-top' accept="image/*"/>
+				<input class='btn' type='file' multiple id='img-top' accept="image/*"/>
 				<h3>Middle Images</h3>
-				<input class='button' type='file' multiple id='img-mid' accept="image/*"/>
+				<input class='btn' type='file' multiple id='img-mid' accept="image/*"/>
 				<h3>Bottom Images</h3>
-				<input class='button' type='file' multiple id='img-bot' accept="image/*"/>
+				<input class='btn' type='file' multiple id='img-bot' accept="image/*"/>
 
 				<h4>Click submit below when you are done uploading images.</h4>
-				<input class='button' type='button' id='submit-btn' value='Submit'></button>
+				<input class='btn' type='button' id='submit-btn' value='Submit'></button>
 			</form>
 		</div>
 
-		<div class="row results" id="hidden-until-submit">
-			<button id="top-left">&#10094;</button>
-			<button id="top-right">&#10095;</button>
-			<button id="mid-left">&#10094;</button>
-			<button id="mid-right">&#10095;</button>
-			<button id="bot-left">&#10094;</button>
-			<button id="bot-right">&#10095;</button>
+			<div class="col">
+			</div>
+		<div class="row results">
+			<div class="col-xs-3">
+				<button id="top-left">&#10094;</button>
+			</div>
+			<div class="col-xs-6" id="top-div">
+			</div>
+			<div class="col-xs-3">
+				<button id="top-right">&#10095;</button>
+			</div>
+		</div>
+		<div class="row results">
+			<div class="col-xs-3">
+				<button id="mid-left">&#10094;</button>
+			</div>
+			<div class="col-xs-6" id="mid-div">
+			</div>
+			<div class="col-xs-3">
+				<button id="mid-right">&#10095;</button>
+			</div>
+		</div>
+		<div class="row results">
+			<div class="col-xs-3">
+				<button id="bot-left">&#10094;</button>
+			</div>
+			<div class="col-xs-6" id="bot-div">
+			</div>
+			<div class="col-xs-3">
+				<button id="bot-right">&#10095;</button>
+			</div>
 		</div>
 	</div>
 

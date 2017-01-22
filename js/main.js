@@ -11,7 +11,7 @@
 $('.results').hide();
 
 //Shows files. fil is for file id for upload. clss is for image class for showing
-function previewFile(fil, clss)
+function previewFile(fil, clss, divNm)
 {
 	var querySelect = document.querySelector(fil);
 	var fileSize = querySelect.files.length;
@@ -27,19 +27,10 @@ function previewFile(fil, clss)
 			var newImg = document.createElement("img");
 			newImg.setAttribute('src', reader.result);
 			newImg.setAttribute('class', 'img-responsive center-block ' + clss);
-			document.body.appendChild(newImg);
+			newImg.setAttribute('style', 'display: none');
+			document.getElementById(divNm).appendChild(newImg);
 
-			//TODO Does this even work? 
-			//Reorders elements in case it screws up
-			if(clss == "show-mid")
-			{
-				$(newImg).insertAfter(".show-top");
-			}
-			else if(clss == "show-bot")
-			{
-				$(newImg).insertAfter(".show-mid");
-			}
-		}, false);
+			}, false);
 
 		reader.readAsDataURL(file);
 	}
@@ -50,15 +41,14 @@ function previewFile(fil, clss)
 	}
 }
 
-
 $("#submit-btn").click(function()
 {
 	//Run previewfile 3 times for each picture
-	previewFile('#img-top', 'show-top');
-	previewFile('#img-mid', 'show-mid');
-	previewFile('#img-bot', 'show-bot');
+	previewFile('#img-top', 'show-top', 'top-div');
+	previewFile('#img-mid', 'show-mid', 'mid-div');
+	previewFile('#img-bot', 'show-bot', 'bot-div');
 
-	//Unhides the pictures
+	//Unhides thearrows 
 	$('.results').show();
 });
 
@@ -69,14 +59,12 @@ var slideIndex = 1;
 
 function plusDivs(n, current)
 {
-	showDivs(n, current);
+	showDivs(slideIndex += n, current);
 }
 
 function showDivs(n, current)
 {
-	slideIndex += n;
-	var i;
-	var x = document.getElementById(current);
+	var x = document.getElementsByClassName(current);
 	if(slideIndex > x.length)
 	{
 		slideIndex = 1;
@@ -85,7 +73,7 @@ function showDivs(n, current)
 	{
 		slideIndex = x.length;
 	}
-	for(i = 0; i < x.length; i++)
+	for(var i = 0; i < x.length; i++)
 	{
 		x[i].style.display = "none";
 	}
@@ -95,30 +83,30 @@ function showDivs(n, current)
 //Coding each button
 $("#top-left").click(function()
 {
-	plusDivs(-1, '#show-top');
+	plusDivs(-1, 'show-top');
 });
 
 $("#top-right").click(function()
 {
-	plusDivs(1, '#show-top');
+	plusDivs(1, 'show-top');
 });
 
 $("#mid-left").click(function()
 {
-	plusDivs(-1, '#show-mid');
+	plusDivs(-1, 'show-mid');
 });
 
 $("#mid-right").click(function()
 {
-	plusDivs(1, '#show-mid');
+	plusDivs(1, 'show-mid');
 });
 
 $("#bot-left").click(function()
 {
-	plusDivs(-1, '#show-bot');
+	plusDivs(-1, 'show-bot');
 });
 
 $("#bot-right").click(function()
 {
-	plusDivs(1, '#show-bot');
+	plusDivs(1, 'show-bot');
 });
