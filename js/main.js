@@ -64,6 +64,7 @@ $("#submit-btn").click(function()
 
 
 //FOR SCROLLING THROUGH IMAGES
+//TODO FIX THIS SHIT
 var slideIndex = 1;
 
 function plusDivs(n, current)
