@@ -31,3 +31,15 @@ body {
 	text-align: center;
 }
 
+.scroll-btn {
+	background-color: #008CBA;
+	font-size: 150%;
+}
+
+.scroll-right {
+	float: left;
+}
+
+.scroll-left {
+	float: right;
+}
