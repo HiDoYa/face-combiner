@@ -11,6 +11,7 @@ body {
 }
 
 .title {
+	margin-top: 3%;
 	background: #566b8c;
 	color: white;
 	border-color: black;
@@ -34,6 +35,7 @@ body {
 .scroll-btn {
 	background-color: #008CBA;
 	font-size: 150%;
+	height: 100px;
 }
 
 .scroll-right {
@@ -43,3 +45,4 @@ body {
 .scroll-left {
 	float: right;
 }
+

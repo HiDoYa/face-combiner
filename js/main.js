@@ -1,16 +1,9 @@
-////1. Load all images into document, one overlapping other. Use for loop for each of the images that are to be uploaded on the same position. New image html element for each file upload
-//(use javascript to add centered image automatically. Use dimensions given by email. remove explicit html element for img?)
-//2. When button for left or right is clicked, remove or show the image that is corresponding. Account for looping accordingly
-//3. slideIndex counts the current picture index
-//4. Show/hide buttons along with images
-//5. Randomize the initial order?
-//
-//
-//FOR UPLOADING IMAGES
+//TODO Randomize the initial order?
+
 //Initially hide all images 
 $('.results').hide();
 
-//Shows files. fil is for file id for upload. clss is for image class for showing
+//Shows files. fil is for file id for upload. clss is for image class for showing, div is the location to append the element
 function previewFile(fil, clss, divNm)
 {
 	var querySelect = document.querySelector(fil);
@@ -23,11 +16,12 @@ function previewFile(fil, clss, divNm)
 
 		reader.addEventListener("load", function() 
 		{
-			//Creates new element
+			//Creates new element with attributes
 			var newImg = document.createElement("img");
 			newImg.setAttribute('src', reader.result);
 			newImg.setAttribute('class', 'img-responsive center-block ' + clss);
 			newImg.setAttribute('style', 'display: none');
+			//Appends the new element in its designated div
 			document.getElementById(divNm).appendChild(newImg);
 
 			}, false);
@@ -35,12 +29,17 @@ function previewFile(fil, clss, divNm)
 		reader.readAsDataURL(file);
 	}
 
+	//Reads and previews all files
 	if(files)
 	{
 		[].forEach.call(files, readAndPreview);
 	}
+
+	//TODO Fix: Clears all input
+	files = "";
 }
 
+//When submit is clicked, preview files and show pictures
 $("#submit-btn").click(function()
 {
 	//Run previewfile 3 times for each picture
@@ -48,15 +47,15 @@ $("#submit-btn").click(function()
 	previewFile('#img-mid', 'show-mid', 'mid-div');
 	previewFile('#img-bot', 'show-bot', 'bot-div');
 
-	//Unhides thearrows 
+	//Shows the arrows and pictures
 	$('.results').show();
 });
 
 
 //FOR SCROLLING THROUGH IMAGES
-//TODO FIX THIS SHIT
 var slideIndex = 1;
 
+//Adds to slideIndex and calls showDivs
 function plusDivs(n, current)
 {
 	showDivs(slideIndex += n, current);
@@ -75,12 +74,14 @@ function showDivs(n, current)
 	}
 	for(var i = 0; i < x.length; i++)
 	{
+		//Hides this image
 		x[i].style.display = "none";
 	}
+	//Shows this image
 	x[slideIndex-1].style.display = "block";
 }
 
-//Coding each button
+//For each button
 $("#top-left").click(function()
 {
 	plusDivs(-1, 'show-top');
