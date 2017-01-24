@@ -111,3 +111,14 @@ $("#bot-right").click(function()
 {
 	plusDivs(1, 'show-bot');
 });
+
+//Color picker
+ColorPicker(
+	document.getElementById('slide'),
+	document.getElementById('picker'), 
+	function(hex, hsv, rgb)
+	{
+		document.body.style.backgroundColor = hex;
+		document.getElementById('hex').innerHTML = "Hex " + hex;
+		document.getElementById('rgb').innerHTML = 'RGB (' + rgb.r.toFixed() + ',' + rgb.g.toFixed() + ',' + rgb.b.toFixed() + ')';
+	});

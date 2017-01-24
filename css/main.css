@@ -46,3 +46,28 @@ body {
 	float: right;
 }
 
+#picker {
+	width: 200px;
+	height: 200px;
+}
+
+#slide {
+	width: 50px;
+	height: 200px;
+}
+
+.picker-wrapper {
+	position: absolute;
+	float: right;
+	background-color: rgb(160, 156, 160);
+	margin: 10px;
+	border-radius: 7%;
+	border-color: black;
+	border-style: solid;
+	border-width: 3px;
+}
+
+.add-border {
+	border-style: solid;
+	border-width: 2px;
+}
