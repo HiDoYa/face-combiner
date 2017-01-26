@@ -9,7 +9,6 @@ function previewFile(fil, clss, divNm)
 	var querySelect = document.querySelector(fil);
 	var fileSize = querySelect.files.length;
 	var files = querySelect.files;
-	var imgShow = false;
 
 	function readAndPreview(file)
 	{
@@ -21,18 +20,7 @@ function previewFile(fil, clss, divNm)
 			var newImg = document.createElement("img");
 			newImg.setAttribute('src', reader.result);
 			newImg.setAttribute('class', 'img-responsive center-block ' + clss);
-
-			//For a random number between 0 and filesize, enable display
-			if(imgShow === false)
-			{
-				newImg.setAttribute('style', 'display: block');
-				imgShow = true;
-			}
-			else
-			{
-				newImg.setAttribute('style', 'display: none');
-			}
-
+			newImg.setAttribute('style', 'display: none');
 			//Appends the new element in its designated div
 			document.getElementById(divNm).appendChild(newImg);
 
@@ -46,7 +34,7 @@ function previewFile(fil, clss, divNm)
 	{
 		[].forEach.call(files, readAndPreview);
 	}
-}
+
 
 //When submit is clicked, preview files and show pictures
 $("#submit-btn").click(function()
