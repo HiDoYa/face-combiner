@@ -33,9 +33,12 @@ body {
 }
 
 .scroll-btn {
-	background-color: #008CBA;
+	background-color: #efe2e2;
+	opacity: 0.3;
+	filter: alpha(opacity=50);
 	font-size: 150%;
-	height: 100px;
+	margin-left: 30%;
+	margin-right: 30%;
 }
 
 .scroll-right {
@@ -71,3 +74,4 @@ body {
 	border-style: solid;
 	border-width: 2px;
 }
+

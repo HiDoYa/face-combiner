@@ -4,7 +4,7 @@
 $('.results').hide();
 
 //Shows files. fil is for file id for upload. clss is for image class for showing, div is the location to append the element
-function previewFile(fil, clss, divNm)
+function previewFile(fil, clss, divNm, btn1, btn2)
 {
 	var querySelect = document.querySelector(fil);
 	var fileSize = querySelect.files.length;
@@ -36,6 +36,10 @@ function previewFile(fil, clss, divNm)
 			//Appends the new element in its designated div
 			document.getElementById(divNm).appendChild(newImg);
 
+			//Change button height
+			var temp = $('.' + clss).height()
+			document.getElementById(btn1).setAttribute("style", "height: " + temp + 'px');
+			document.getElementById(btn2).setAttribute("style", "height: " + temp + 'px');
 			}, false);
 
 		reader.readAsDataURL(file);
@@ -52,9 +56,9 @@ function previewFile(fil, clss, divNm)
 $("#submit-btn").click(function()
 {
 	//Run previewfile 3 times for each picture
-	previewFile('#img-top', 'show-top', 'top-div');
-	previewFile('#img-mid', 'show-mid', 'mid-div');
-	previewFile('#img-bot', 'show-bot', 'bot-div');
+	previewFile('#img-top', 'show-top', 'top-div', 'top-left', 'top-right');
+	previewFile('#img-mid', 'show-mid', 'mid-div', 'mid-left', 'mid-right');
+	previewFile('#img-bot', 'show-bot', 'bot-div', 'bot-left', 'bot-right');
 
 	//Shows the arrows and pictures
 	$('.results').show();
