@@ -12,24 +12,17 @@ body {
 
 .title {
 	margin-top: 3%;
-	background: #566b8c;
-	color: white;
-	border-color: black;
-	border-style: solid;
 	padding: 2%;
 }
 
-.main-page {
-	background-color: #7da6e8;
-	border-style: solid;
+.subtitle {
+	margin: 2%;
 }
 
 .btn {
-	background-color: #cddbf2;
-	border-style: solid;
 	padding: 1%;
 	margin: 1%;
-	text-align: center;
+	margin-bottom: 3%;
 }
 
 .scroll-btn {
@@ -52,19 +45,21 @@ body {
 #picker {
 	width: 200px;
 	height: 200px;
+	padding: 0px;
 }
 
 #slide {
-	width: 50px;
+	width: 30px;
 	height: 200px;
+	padding: 0px;
 }
 
 .picker-wrapper {
 	position: absolute;
 	float: right;
-	background-color: rgb(160, 156, 160);
-	margin: 10px;
-	border-radius: 7%;
+	background-color: #fafafa;
+	margin: 5%;
+	border-radius: 5%;
 	border-color: black;
 	border-style: solid;
 	border-width: 3px;
@@ -72,6 +67,6 @@ body {
 
 .add-border {
 	border-style: solid;
-	border-width: 2px;
+	border-width: 3px;
 }
 

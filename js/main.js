@@ -1,5 +1,3 @@
-//TODO Randomize the initial order?
-
 //Initially hide all images 
 $('.results').hide();
 
