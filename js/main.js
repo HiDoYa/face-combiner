@@ -15,13 +15,21 @@ function previewFile(fil, clss, divNm, btn1, btn2)
 
 		reader.addEventListener("load", function() 
 		{
+			//Gets whether an element already exists
+			var alreadyExists = false;
+			var getClss = document.getElementsByClassName(clss);
+			if(getClss.length > 0)
+			{
+				alreadyExists = true;
+			}
+
 			//Creates new element with attributes
 			var newImg = document.createElement("img");
 			newImg.setAttribute('src', reader.result);
 			newImg.setAttribute('class', 'img-responsive center-block ' + clss);
 
 			//For a random number between 0 and filesize, enable display
-			if(imgShow === false)
+			if(imgShow === false && alreadyExists === false)
 			{
 				newImg.setAttribute('style', 'display: block');
 				imgShow = true;
@@ -49,7 +57,7 @@ function previewFile(fil, clss, divNm, btn1, btn2)
 		[].forEach.call(files, readAndPreview);
 	}
 
-	document.getElementById("image-upload").reset();
+	document.getElementById("image-upload-" + clss).reset();
 }
 
 //When submit is clicked, preview files and show pictures
