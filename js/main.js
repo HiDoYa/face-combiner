@@ -48,6 +48,8 @@ function previewFile(fil, clss, divNm, btn1, btn2)
 	{
 		[].forEach.call(files, readAndPreview);
 	}
+
+	document.getElementById("image-upload").reset();
 }
 
 //When submit is clicked, preview files and show pictures
