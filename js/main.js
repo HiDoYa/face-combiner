@@ -137,4 +137,5 @@ $("#bot-right").click(function()
 function setTextColor(picker)
 {
 	document.body.style.backgroundColor = '#' + picker;
+	document.getElementById("chosen-value").style.color = '#' + picker.toString();
 }
