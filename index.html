@@ -13,7 +13,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
 	<!-- Color picker -->
-	<script type="text/javascript" src="js/colorpicker.min.js"></script>
+	<script type="text/javascript" src="js/jscolor.min.js"></script>
 <body>
 	<div class="container">
 		<div class="row title add-border text-center">
@@ -23,12 +23,9 @@
 			<h3>Hold down ctrl or cmd to select multiple files while uploading.</h3>
 		</div>
 
-		<div class="row picker-wrapper" id="color-picker">
-			<h6 class="text-center">Background Color</h6>
-			<div class="col-md-6 add-border" id="picker"></div>
-			<div class="col-md-6 add-border" id="slide"></div>
-			<div class="text-center" id="rgb"></div>
-			<div class="text-center" id="hex"></div>
+		<div class="row text-center colorpicker-margin">
+			<h3 class="title-margin">Background Color</h3>
+			<button class="jscolor {valueElemnt:'chosen-value', onFineChange:'setTextColor(this)'}">Pick Text color</button>
 		</div>
 
 		<div class="row text-center">
