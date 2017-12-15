@@ -1,7 +1,7 @@
 # face-combiner
 A web app that combines faces in silly ways using uploaded images of your face.
 
-## Post-Mortem Overview
+## Overview
 This project was relatively simple because the user would just upload images to each three cateogries (top, middle, and bottom) and all the app had to do was to display the images stacked on top of each other and lets the user scroll through the images. I also added a background color changer, which was done using jscolorpicker. 
 
 #### Time Spent
