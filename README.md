@@ -1,7 +1,7 @@
 # face-combiner
-A web app that combines faces in silly ways using uploaded images of your face.
+[Link here](http://portfolio.hiroyagojo.com/face-combiner/)
 
-[Can be found here](https://facecombiner.000webhostapp.com/)
+A web app that combines faces in silly ways using uploaded images of your face.
 
 ![alt text](images/screenshot.png)
 
